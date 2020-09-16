@@ -89,3 +89,5 @@ echo "installing httprobe"
 go get -u github.com/tomnomnom/httprobe 
 echo "done"
 
+echo "installing wfuzz"
+sudo apt install wfuzz
