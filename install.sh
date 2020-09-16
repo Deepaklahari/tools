@@ -89,8 +89,26 @@ echo "installing httprobe"
 go get -u github.com/tomnomnom/httprobe 
 echo "done"
 
+echo "installing assetfinder"
+go get -u github.com/tomnomnom/assetfinder
+echo "done"
+
+echo "installing httpx"
+GO111MODULE=auto go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
+
 echo "installing wfuzz"
 sudo apt install wfuzz
+
+echo "installing wayback url"
+go get github.com/tomnomnom/waybackurls
+
+echo "installing hakrawler"
+go get github.com/hakluke/hakrawler
+
+echo "installing webscreenshot"
+git clone https://github.com/maaaaz/webscreenshot.git
+cd webscreenshot 
+pip install -r requirements.txt
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
