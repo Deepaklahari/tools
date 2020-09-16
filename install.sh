@@ -116,7 +116,7 @@ GO111MODULE=auto go get -u -v github.com/projectdiscovery/subfinder/cmd/subfinde
 echo "done"
 
 echo "installing Nuclei"
-GO111MODULE=on go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+ git clone https://github.com/projectdiscovery/nuclei.git; cd nuclei/cmd/nuclei/; go build; mv nuclei /usr/local/bin/; nuclei -h
 echo "done"
 
 
