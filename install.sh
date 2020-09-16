@@ -115,6 +115,10 @@ echo "installing subfinder"
 GO111MODULE=auto go get -u -v github.com/projectdiscovery/subfinder/cmd/subfinder
 echo "done"
 
+echo "installing Nuclei"
+GO111MODULE=on go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+echo "done"
+
 
 echo "installing webscreenshot"
 git clone https://github.com/maaaaz/webscreenshot.git
