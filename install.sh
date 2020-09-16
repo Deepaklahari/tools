@@ -50,10 +50,6 @@ done
 fi
 
 
-#Don't forget to set up AWS credentials!
-echo "Don't forget to set up AWS credentials!"
-apt install -y awscli
-echo "Don't forget to set up AWS credentials!"
 
 echo " creating tools folder in root directory "
 mkdir ~/tools
@@ -77,7 +73,7 @@ cd ~/tools/
 echo "done"
 
 echo "installing sqlmap"
-git clone --depth 1 https://github.com/sqlmapproject/sqlmap.git sqlmap-dev
+apt install sqlmap
 cd ~/tools/
 echo "done"
 
