@@ -91,3 +91,15 @@ echo "done"
 
 echo "installing wfuzz"
 sudo apt install wfuzz
+
+echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
+ls -la
+
+echo "installing bash_profile aliases from recon_profile"
+git clone https://github.com/deepaklahari/recon_profile.git
+cd recon_profile
+cat bash_profile >> ~/.bash_profile
+source ~/.bash_profile
+cd ~/tools/
+echo "done"
+
