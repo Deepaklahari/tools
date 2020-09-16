@@ -21,3 +21,5 @@
 11. wayback url
 12. wfuzz
 13. hakrawler
+14. findomain
+15. subfinder
