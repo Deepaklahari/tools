@@ -16,6 +16,10 @@ sudo apt-get install -y python-dnspython
 sudo apt-get install -y git
 sudo apt-get install -y rename
 sudo apt-get install -y xargs
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+sudo apt-get install make
+sudo apt-get install perl
+
 
 #install go
 if [[ -z "$GOPATH" ]];then
@@ -92,14 +96,25 @@ echo "done"
 echo "installing httpx"
 GO111MODULE=auto go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
 
-echo "installing wfuzz"
-sudo apt install wfuzz
+echo "installing ffuf"
+sudo go get github.com/ffuf/ffuf
 
 echo "installing wayback url"
 go get github.com/tomnomnom/waybackurls
 
 echo "installing hakrawler"
 go get github.com/hakluke/hakrawler
+
+echo "installing findomain"
+wget https://github.com/Edu4rdSHL/findomain/releases/latest/download/findomain-linux
+chmod +x findomain-linux
+./findomain-linux
+echo "done"
+
+echo "installing subfinder"
+GO111MODULE=auto go get -u -v github.com/projectdiscovery/subfinder/cmd/subfinder
+echo "done"
+
 
 echo "installing webscreenshot"
 git clone https://github.com/maaaaz/webscreenshot.git
