@@ -19,6 +19,12 @@ sudo apt-get install -y xargs
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo apt-get install make
 sudo apt-get install perl
+apt-get install curl
+
+curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+
+python get-pip.py
+
 #install go
 if [[ -z "$GOPATH" ]];then
 echo "It looks like go is not installed, would you like to install it now"
@@ -95,7 +101,8 @@ echo "installing httpx"
 GO111MODULE=auto go get -u -v github.com/projectdiscovery/httpx/cmd/httpx
 
 echo "installing ffuf"
-sudo go get github.com/ffuf/ffuf
+cd ~/go/bin
+git clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build
 
 echo "installing wayback url"
 go get github.com/tomnomnom/waybackurls
