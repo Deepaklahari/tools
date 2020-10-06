@@ -19,8 +19,6 @@ sudo apt-get install -y xargs
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo apt-get install make
 sudo apt-get install perl
-
-
 #install go
 if [[ -z "$GOPATH" ]];then
 echo "It looks like go is not installed, would you like to install it now"
@@ -104,6 +102,8 @@ go get github.com/tomnomnom/waybackurls
 
 echo "installing hakrawler"
 go get github.com/hakluke/hakrawler
+go get github.com/hakluke/hakcheckurl
+echo "Done"
 
 echo "installing findomain"
 wget https://github.com/Edu4rdSHL/findomain/releases/latest/download/findomain-linux
@@ -111,13 +111,39 @@ chmod +x findomain-linux
 ./findomain-linux
 echo "done"
 
+echo "GoSpider"
+go get -u github.com/jaeles-project/gospider
+echo "Done"
+
+echo "Installing Knocky"
+git clone https://github.com/guelfoweb/knock.git
+cd knock
+echo "Set Your api on knockpy/config.json"
+sudo python setup.py install
+echo "Done"
+
 echo "installing subfinder"
 GO111MODULE=auto go get -u -v github.com/projectdiscovery/subfinder/cmd/subfinder
 echo "done"
 
+echo "Installing AMASS"
+export GO111MODULE=on
+go get -v github.com/OWASP/Amass/v3/...
+echo "Done"
+
+
 echo "installing Nuclei"
  git clone https://github.com/projectdiscovery/nuclei.git; cd nuclei/cmd/nuclei/; go build; mv nuclei /usr/local/bin/; nuclei -h
 echo "done"
+
+echo "Installing Chaos"
+GO111MODULE=on go get -u github.com/projectdiscovery/chaos-client/cmd/chaos
+echo "Done"
+
+echo "Installing Gau and SubJS"
+GO111MODULE=on go get -u -v github.com/lc/gau
+GO111MODULE=on go get -u -v github.com/lc/subjs
+echo "Done"
 
 
 echo "installing webscreenshot"
