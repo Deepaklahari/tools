@@ -120,6 +120,7 @@ git clone https://github.com/guelfoweb/knock.git
 cd knock
 echo "Set Your api on knockpy/config.json"
 sudo python setup.py install
+cd ~/tools/
 echo "Done"
 
 echo "installing subfinder"
@@ -134,6 +135,7 @@ echo "Done"
 
 echo "installing Nuclei"
  git clone https://github.com/projectdiscovery/nuclei.git; cd nuclei/cmd/nuclei/; go build; mv nuclei /usr/local/bin/; nuclei -h
+cd ~/tools/
 echo "done"
 
 echo "Installing Chaos"
@@ -150,12 +152,13 @@ echo "installing webscreenshot"
 git clone https://github.com/maaaaz/webscreenshot.git
 cd webscreenshot 
 pip install -r requirements.txt
+cd ~/tools/
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
 
 echo "installing bash_profile aliases from recon_profile"
-git clone https://github.com/deepaklahari/recon_profile.git
+git clone https://github.com/Deepaklahari/recon_profile
 cd recon_profile
 cat bash_profile >> ~/.bash_profile
 source ~/.bash_profile
