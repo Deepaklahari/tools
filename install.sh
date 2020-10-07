@@ -140,8 +140,8 @@ export GO111MODULE=on
 go get -v github.com/OWASP/Amass/v3/...
 echo "Done"
 
-echo "Installing WebScreenshot"
-pip install webscreenshot
+echo "Installing Gowitness"
+go get -u github.com/sensepost/gowitness
 echo "Done"
 
 
