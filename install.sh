@@ -20,10 +20,9 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo apt-get install make
 sudo apt-get install perl
 apt-get install curl
+sudo apt install chromium-browser
 sudo curl https://getmic.ro | bash
-
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
-
 python get-pip.py
 
 #install go
@@ -142,7 +141,7 @@ echo "Done"
 
 
 echo "installing Nuclei"
- git clone https://github.com/projectdiscovery/nuclei.git; cd nuclei/cmd/nuclei/; go build; mv nuclei /usr/local/bin/; nuclei -h
+ g GO111MODULE=on go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
 cd ~/tools/
 echo "done"
 
@@ -156,11 +155,6 @@ GO111MODULE=on go get -u -v github.com/lc/subjs
 echo "Done"
 
 
-echo "installing webscreenshot"
-git clone https://github.com/maaaaz/webscreenshot.git
-cd webscreenshot 
-pip install -r requirements.txt
-cd ~/tools/
 
 echo "Installing OhMyZSH"
 sudo apt install zsh
