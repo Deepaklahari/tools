@@ -19,10 +19,12 @@ sudo apt-get install -y xargs
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo apt-get install make
 sudo apt-get install perl
+apt install phantomjs
 apt-get install curl
 sudo curl https://getmic.ro | bash
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
+
 
 #install go
 if [[ -z "$GOPATH" ]];then
@@ -136,6 +138,10 @@ echo "done"
 echo "Installing AMASS"
 export GO111MODULE=on
 go get -v github.com/OWASP/Amass/v3/...
+echo "Done"
+
+echo "Installing WebScreenshot"
+pip install webscreenshot
 echo "Done"
 
 
