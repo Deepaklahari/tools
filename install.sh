@@ -141,7 +141,8 @@ echo "Done"
 
 
 echo "installing Nuclei"
- g GO111MODULE=on go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+ GO111MODULE=on go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
+ nuclei -update-templates
 cd ~/tools/
 echo "done"
 
