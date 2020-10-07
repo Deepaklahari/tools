@@ -24,7 +24,7 @@ apt-get install curl
 sudo curl https://getmic.ro | bash
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
-
+pip install selenium==2.53.6
 
 #install go
 if [[ -z "$GOPATH" ]];then
