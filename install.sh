@@ -140,10 +140,16 @@ export GO111MODULE=on
 go get -v github.com/OWASP/Amass/v3/...
 echo "Done"
 
-echo "Installing Gowitness"
-go get -u github.com/sensepost/gowitness
+cd ~/tools/
+
+echo "Installing EyeWitness"
+git clone https://github.com/FortyNorthSecurity/EyeWitness.git
+cd EyeWitness/Python/setup
+chmod +x setup.sh
+./setup.sh
 echo "Done"
 
+cd ~/tools/
 
 echo "installing Nuclei"
  GO111MODULE=on go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
