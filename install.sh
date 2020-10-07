@@ -20,6 +20,7 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo apt-get install make
 sudo apt-get install perl
 apt-get install curl
+sudo curl https://getmic.ro | bash
 
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 
@@ -160,6 +161,15 @@ git clone https://github.com/maaaaz/webscreenshot.git
 cd webscreenshot 
 pip install -r requirements.txt
 cd ~/tools/
+
+echo "Installing OhMyZSH"
+sudo apt install zsh
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+git clone https://github.com/romkatv/powerlevel10k.git $ZSH_CUSTOM/themes/powerlevel10k
+git clone https://github.com/zsh-users/zsh-autosuggestions.git $ZSH_CUSTOM/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git $ZSH_CUSTOM/plugins/zsh-syntax-highlighting
+echo "Done"
 
 echo -e "\n\n\n\n\n\n\n\n\n\n\nDone! All tools are set up in ~/tools"
 ls -la
