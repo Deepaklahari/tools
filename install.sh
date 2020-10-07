@@ -20,7 +20,6 @@ curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 sudo apt-get install make
 sudo apt-get install perl
 apt-get install curl
-sudo apt install chromium-browser
 sudo curl https://getmic.ro | bash
 curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
 python get-pip.py
@@ -70,7 +69,7 @@ echo "done"
 
 #install chromium
 echo "Installing Chromium"
-sudo snap install chromium
+sudo apt install chromium-browser
 echo "done"
 
 echo "installing Sublist3r"
