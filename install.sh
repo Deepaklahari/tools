@@ -119,6 +119,11 @@ chmod +x findomain-linux
 ./findomain-linux
 echo "done"
 
+cd ~/tools/
+echo "" installing garud"
+git clone https://github.com/R0X4R/Garud.git && cd Garud/ && chmod +x garud && mv garud /usr/local/bin/
+echo "Done"
+
 echo "GoSpider"
 go get -u github.com/jaeles-project/gospider
 echo "Done"
