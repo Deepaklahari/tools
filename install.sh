@@ -81,6 +81,12 @@ pip install -r requirements.txt
 cd ~/tools/
 echo "done"
 
+echo "Subjack"
+go get github.com/haccer/subjack
+cd ~/tools/
+echo "done"
+
+
 echo "installing sqlmap"
 apt install sqlmap
 cd ~/tools/
