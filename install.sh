@@ -106,6 +106,7 @@ echo "installing ffuf"
 cd ~/go/bin
 git clone https://github.com/ffuf/ffuf ; cd ffuf ; go get ; go build
 
+
 echo "installing wayback url"
 go get github.com/tomnomnom/waybackurls
 
@@ -130,6 +131,14 @@ cd knock
 echo "Set Your api on knockpy/config.json"
 sudo python setup.py install
 cd ~/tools/
+echo "Done"
+
+echo "Installing okadminfinder3"
+git clone https://github.com/mIcHyAmRaNe/okadminfinder3.git
+cd okadminfinder3
+pip3 install --user -r requirements.txt
+chmod +x okadminfinder.py
+xd ~/tools/
 echo "Done"
 
 echo "installing subfinder"
