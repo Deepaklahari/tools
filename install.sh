@@ -91,9 +91,7 @@ echo "installing nmap"
 sudo apt-get install -y nmap
 echo "done"
 
-echo "installing httprobe"
-go get -u github.com/tomnomnom/httprobe 
-echo "done"
+
 
 echo "installing assetfinder"
 go get -u github.com/tomnomnom/assetfinder
@@ -121,17 +119,7 @@ chmod +x findomain-linux
 ./findomain-linux
 echo "done"
 
-echo "GoSpider"
-go get -u github.com/jaeles-project/gospider
-echo "Done"
 
-echo "Installing Knocky"
-git clone https://github.com/guelfoweb/knock.git
-cd knock
-echo "Set Your api on knockpy/config.json"
-sudo python setup.py install
-cd ~/tools/
-echo "Done"
 
 echo "Installing okadminfinder3"
 git clone https://github.com/mIcHyAmRaNe/okadminfinder3.git
@@ -152,24 +140,12 @@ echo "Done"
 
 cd ~/tools/
 
-echo "Installing EyeWitness"
-git clone https://github.com/FortyNorthSecurity/EyeWitness.git
-cd EyeWitness/Python/setup
-chmod +x setup.sh
-./setup.sh
-echo "Done"
-
-cd ~/tools/
-
 echo "installing Nuclei"
  GO111MODULE=on go get -u -v github.com/projectdiscovery/nuclei/v2/cmd/nuclei
  nuclei -update-templates
 cd ~/tools/
 echo "done"
 
-echo "Installing Chaos"
-GO111MODULE=on go get -u github.com/projectdiscovery/chaos-client/cmd/chaos
-echo "Done"
 
 echo "Installing Gau and SubJS"
 GO111MODULE=on go get -u -v github.com/lc/gau
