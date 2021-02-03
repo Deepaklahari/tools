@@ -8,13 +8,14 @@
 # Thanks to Nahamsec
 
 # Tools included # 
+0. OhMyZSH
 1. GoLang
 2. aquatone
 3. chromium
 4. sqlmap
 5. sublister
 6. nmap
-7. httprobe
+7. FFUF
 8. assetfinder
 9. webscreenshot
 10. httpx
@@ -23,3 +24,7 @@
 13. hakrawler
 14. findomain
 15. subfinder
+16. okadminfinder3
+17. AMASS
+18. Nuclei
+19. Gau and SUBJS
